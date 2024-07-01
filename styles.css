@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: url('https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?cs=srgb&dl=pexels-pixabay-209831.jpg&fm=jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(192, 192, 192, 0.6);
+    border-radius: 10px;
+}
+
+.city_not_found{
+    width: 100%;
+    text-align: center;
+    margin-top: 5%;
+    color: #353935;
+    font-size: 0.9rem;
+}
+
+.formArea {
+    display: flex;
+    gap: 15px;
+}
+
+.formArea input {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    width: 90%;
+}
+
+input::placeholder {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.formArea button {
+    padding: 10px 20px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.9rem;
+    background-color: #1434A4;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1433a4d9;
+}
+
+.weather_icon {
+    width: 100%;
+    padding: 50px;
+    background: url('http://openweathermap.org/img/wn/09d@2x.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.weather_icon img {
+    width: 70%;
+}
+
+.weather_condition {
+    width: 100%;
+    text-align: center;
+    color: #353935;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.condition {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.date_time {
+    width: 50%;
+    margin-top: 4%;
+    margin: auto;
+    padding: 5px;
+    border-radius: 50px;
+    background-color: #1433a48f;
+    display: flex;
+    justify-content: space-around;
+    font-weight: 700;
+}
+
+.temp {
+    margin-top: 2%;
+    font-size: 1.7rem;
+}
+
+.boxes {
+    width: 100%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center; /* Center align the boxes */
+    align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap */
+}
+
+.box {
+    width: 30%; /* Adjust width for better spacing */
+    border: 1px solid whitesmoke;
+    background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    border-radius: 10px;
+    margin: 10px; /* Adds margin to separate rows and columns */
+    padding: 20px; /* Adds padding for a better look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow effect */
+    transition: box-shadow 0.3s ease; /* Adds transition effect for shadow */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.box:hover {
+    cursor: pointer;
+}
+
+.icon {
+    color: #353935;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 1.7rem;
+}
+
+.temp_type {
+    text-align: center;
+    margin-bottom: 1%;
+    margin-top: 2%;
+}
+
+.humidity_percentage {
+    text-align: center;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .formArea {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formArea input {
+        width: 100%;
+    }
+
+    .formArea button {
+        margin-top: 10px;
+    }
+
+    .weather_icon img {
+        width: 80%;
+    }
+
+    .boxes {
+        flex-direction: column; /* Stacks boxes vertically */
+    }
+
+    .box {
+        width: 90%; /* Full width on smaller screens */
+    }
+}
+
+/* Media Query for very small screens */
+@media (max-width: 385px) {
+    .date_time {
+        width: 70%;
+    }
+}
